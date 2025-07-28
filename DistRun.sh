@@ -15,7 +15,7 @@ sleep 5
 # 获取当前时间（格式：YYYY-MM-DD_HH-MM-SS）
 CURRENT_TIME=$(date +"%Y-%m-%d")
 # 定义日志目录和文件名
-LOG_DIR="logByFxy/NormLog"
+LOG_DIR="logByFxy/DistLog"
 LOG_FILE="${LOG_DIR}/big_tensor_${CURRENT_TIME}.log"
 # 执行 Python 命令，并将 stdout 和 stderr 重定向到日志文件
 
@@ -41,11 +41,11 @@ echo "SAVE_PNORM_DATA:${SAVE_PNORM_DATA}" >> "${LOG_FILE}" 2>&1
 #     --accuracy=True \
 #     >> "${LOG_FILE}" 2>&1
 
-python engineV2.py \
-    --api_config_file='big_tensor_0718_normalize.txt' \
-    --accuracy=True \
-    --log_dir="$LOG_DIR"\
-    >> "${LOG_FILE}" 2>&1
+# python engineV2.py \
+#     --api_config_file='big_tensor_0718_normalize.txt' \
+#     --accuracy=True \
+#     --log_dir="$LOG_DIR"\
+#     >> "${LOG_FILE}" 2>&1
 
 # 2147483647
     # --api_config='paddle.digamma(Tensor([10, 42949673, 10],"float16"), )' \
@@ -53,10 +53,10 @@ python engineV2.py \
 
 
 
-# python engine.py \
-#     --api_config='paddle.nn.functional.normalize(x=Tensor([4, 5, 6, 35791395],"float16"), p=4, )' \
-#     --accuracy=True \
-#     >> "${LOG_FILE}" 2>&1
+python engine.py \
+    --api_config='paddle.dist(x=Tensor([10],"float32"), y=Tensor([429496730, 10],"float32"), p=4, )' \
+    --accuracy=True \
+    >> "${LOG_FILE}" 2>&1
 # python engine.py \
 #     --api_config_file='big_tensor_0718_normalize.txt' \
 #     --accuracy=True \

@@ -484,17 +484,17 @@ class APITestAccuracy(APITestBase):
                             if paddle_out_grads[i].dtype == paddle.bfloat16:
                                 paddle_out_grads[i] = paddle.cast(paddle_out_grads[i], dtype="float32")
                                 torch_out_grads[i] = torch_out_grads[i].to(dtype=torch.float32)
+                            self.torch_assert_accuracy(paddle_out_grads[i], torch_out_grads[i], atol=self.atol, rtol=self.rtol)
+                        except Exception as err:
+                            import os
                             if os.getenv("SAVE_PNORM_DATA", "0") == "1":
                                 paddle_np = paddle_out_grads[i].numpy()
                                 torch_np = torch_out_grads[i].cpu().numpy()
-                                # 保存为 npz 文件
-                                from datetime import datetime
+                                shape_str = "_".join(map(str, paddle_np.shape))
                                 current_time = datetime.now().strftime("%Y%m%d_%H-%M-%S")
-                                filename = f"npzFile/pnorm_grads_compare{current_time}.npz"
+                                filename = f"npzFile/pnorm_grads_compare_{shape_str}_{current_time}.npz"
                                 numpy.savez(filename, paddle=paddle_np, torch=torch_np)
-                            
-                            self.torch_assert_accuracy(paddle_out_grads[i], torch_out_grads[i], atol=self.atol, rtol=self.rtol)
-                        except Exception as err:
+                                print(f"[SAVE] Gradient mismatch detected. Data saved to {filename}")
                             print("[accuracy error] backward ", self.api_config.config, "\n", str(err), flush=True)
                             write_to_log("accuracy_error", self.api_config.config)
                             return

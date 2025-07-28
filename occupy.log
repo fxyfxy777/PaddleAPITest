@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/fanxiangyu/PaddleAPITest/mess/testNorm.py", line 24, in <module>
+    occupy_memory(args.gpu, args.mem)
+  File "/home/fanxiangyu/PaddleAPITest/mess/testNorm.py", line 8, in occupy_memory
+    torch.cuda.set_device(device)
+  File "/home/fanxiangyu/env3.10/lib/python3.10/site-packages/torch/cuda/__init__.py", line 476, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: CUDA error: invalid device ordinal
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

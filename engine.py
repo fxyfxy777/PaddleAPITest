@@ -33,7 +33,7 @@ def main():
     parser.add_argument(
         '--api_config',
         # default="paddle.digamma(Tensor([10, 5, 21474836, 2],'float32'), )",
-        default="paddle.nn.functional.normalize(x=Tensor([20452226, 5, 6, 7],'float16'), p=4, )",
+        default="",
         # default="paddle.nn.functional.normalize(x=Tensor([2, 5, 6, 7],'float16'), p=4, )",
     )
     parser.add_argument(
@@ -46,7 +46,7 @@ def main():
     )
     parser.add_argument(
         '--accuracy',
-        default=True,
+        default=False,
     )
     parser.add_argument(
         '--paddle_gpu_performance',
