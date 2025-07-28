@@ -1,0 +1,25 @@
+paddle.nn.functional.normalize(Tensor([2, 2147483649],"float16"), p=2, axis=-1, )   backward
+paddle.nn.functional.normalize(Tensor([2281701379, 1],"float32"), axis=1,   backward )
+paddle.nn.functional.normalize(x=Tensor([1073741825, 4],"float16"), ) backward
+paddle.nn.functional.normalize(x=Tensor([143165577, 5, 6],"float16"), )   backward  passed
+paddle.nn.functional.normalize(x=Tensor([2, 2147483649],"float16"), )   backward
+paddle.nn.functional.normalize(x=Tensor([20452226, 5, 6, 7],"float16"), )   backward passed
+paddle.nn.functional.normalize(x=Tensor([20452226, 5, 6, 7],"float16"), p=4, )  [accuracy error] paddle.nn.functional.normalize(x=Tensor([20452226, 5, 6, 7],"float16"), p=4, ) 
+ Not equal to tolerance rtol=0.01, atol=0.01
+Tensor-likes are not close!
+
+Mismatched elements: 390 / 4294967460 (0.0%)
+Greatest absolute difference: inf at index (1917758, 0, 3, 5) (up to 0.01 allowed)
+Greatest relative difference: inf at index (1917758, 0, 3, 5) (up to 0.01 allowed)
+paddle.nn.functional.normalize(x=Tensor([20452226, 5, 6, 7],"float16"), p=4, axis=3, )
+paddle.nn.functional.normalize(x=Tensor([2147483649, 2],"float16"), p=1.2, )
+paddle.nn.functional.normalize(x=Tensor([4, 25565282, 6, 7],"float16"), p=4, )
+paddle.nn.functional.normalize(x=Tensor([4, 25565282, 6, 7],"float16"), p=4, axis=3, )
+paddle.nn.functional.normalize(x=Tensor([4, 5, 214748365],"float16"), )
+paddle.nn.functional.normalize(x=Tensor([4, 5, 30678338, 7],"float16"), )
+paddle.nn.functional.normalize(x=Tensor([4, 5, 30678338, 7],"float16"), p=4, )
+paddle.nn.functional.normalize(x=Tensor([4, 5, 30678338, 7],"float16"), p=4, axis=3, )
+paddle.nn.functional.normalize(x=Tensor([4, 5, 6, 35791395],"float16"), )
+paddle.nn.functional.normalize(x=Tensor([4, 5, 6, 35791395],"float16"), p=4, )
+paddle.nn.functional.normalize(x=Tensor([4, 5, 6, 35791395],"float16"), p=4, axis=3, )
+paddle.nn.functional.normalize(x=Tensor([4294967297],"float16"), axis=0, )

@@ -484,7 +484,15 @@ class APITestAccuracy(APITestBase):
                             if paddle_out_grads[i].dtype == paddle.bfloat16:
                                 paddle_out_grads[i] = paddle.cast(paddle_out_grads[i], dtype="float32")
                                 torch_out_grads[i] = torch_out_grads[i].to(dtype=torch.float32)
-                            # self.np_assert_accuracy(paddle_out_grads[i].numpy(), torch_out_grads[i].numpy(), atol=self.atol, rtol=self.rtol)
+                            if os.getenv("SAVE_PNORM_DATA", "0") == "1":
+                                paddle_np = paddle_out_grads[i].numpy()
+                                torch_np = torch_out_grads[i].cpu().numpy()
+                                # 保存为 npz 文件
+                                from datetime import datetime
+                                current_time = datetime.now().strftime("%Y%m%d_%H-%M-%S")
+                                filename = f"npzFile/pnorm_grads_compare{current_time}.npz"
+                                numpy.savez(filename, paddle=paddle_np, torch=torch_np)
+                            
                             self.torch_assert_accuracy(paddle_out_grads[i], torch_out_grads[i], atol=self.atol, rtol=self.rtol)
                         except Exception as err:
                             print("[accuracy error] backward ", self.api_config.config, "\n", str(err), flush=True)

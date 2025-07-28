@@ -1,0 +1,96 @@
+Main process id: 132521
+Options: {'api_config_file': '', 'api_config_file_pattern': '', 'api_config': 'paddle.nn.functional.normalize(Tensor([2, 2147483649],"float32"), p=2, axis=-1, )', 'paddle_only': False, 'paddle_cinn': False, 'accuracy': True, 'paddle_gpu_performance': False, 'torch_gpu_performance': False, 'paddle_torch_gpu_performance': False, 'test_amp': False, 'num_gpus': 6, 'num_workers_per_gpu': 1, 'gpu_ids': '', 'required_memory': 10.0, 'test_cpu': False, 'use_cached_numpy': False, 'log_dir': '', 'atol': 0.01, 'rtol': 0.01, 'test_tol': False}
+2025-07-21 14:24:13.015859 test begin: paddle.nn.functional.normalize(Tensor([2, 2147483649],"float32"), p=2, axis=-1, )
+CUDA out of memory. Tried to allocate 16.00 GiB. GPU 0 has a total capacity of 79.18 GiB of which 13.55 GiB is free. Process 118714 has 65.63 GiB memory in use. Of the allocated memory 64.00 GiB is allocated by PyTorch, and 10.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[test error] paddle.nn.functional.normalize(Tensor([2, 2147483649],"float32"), p=2, axis=-1, ): CUDA out of memory. Tried to allocate 16.00 GiB. GPU 0 has a total capacity of 79.18 GiB of which 13.55 GiB is free. Process 118714 has 65.63 GiB memory in use. Of the allocated memory 64.00 GiB is allocated by PyTorch, and 10.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+W0721 14:26:29.558885 132521 gpu_resources.cc:114] Please NOTE: device: 0, GPU Compute Capability: 8.0, Driver API Version: 12.0, Runtime API Version: 11.8
+Done.
+Main process id: 133345
+Options: {'api_config_file': '', 'api_config_file_pattern': '', 'api_config': 'paddle.nn.functional.normalize(Tensor([2, 2147483649],"float32"), p=2, axis=-1, )', 'paddle_only': False, 'paddle_cinn': False, 'accuracy': True, 'paddle_gpu_performance': False, 'torch_gpu_performance': False, 'paddle_torch_gpu_performance': False, 'test_amp': False, 'num_gpus': -1, 'num_workers_per_gpu': 1, 'gpu_ids': '6', 'required_memory': 10.0, 'test_cpu': False, 'use_cached_numpy': False, 'log_dir': '', 'atol': 0.01, 'rtol': 0.01, 'test_tol': False}
+2025-07-21 14:27:51.721473 test begin: paddle.nn.functional.normalize(Tensor([2, 2147483649],"float32"), p=2, axis=-1, )
+CUDA out of memory. Tried to allocate 16.00 GiB. GPU 0 has a total capacity of 79.18 GiB of which 13.55 GiB is free. Process 119518 has 65.63 GiB memory in use. Of the allocated memory 64.00 GiB is allocated by PyTorch, and 10.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[test error] paddle.nn.functional.normalize(Tensor([2, 2147483649],"float32"), p=2, axis=-1, ): CUDA out of memory. Tried to allocate 16.00 GiB. GPU 0 has a total capacity of 79.18 GiB of which 13.55 GiB is free. Process 119518 has 65.63 GiB memory in use. Of the allocated memory 64.00 GiB is allocated by PyTorch, and 10.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+W0721 14:30:20.692519 133345 gpu_resources.cc:114] Please NOTE: device: 0, GPU Compute Capability: 8.0, Driver API Version: 12.0, Runtime API Version: 11.8
+Done.
+Main process id: 135883
+Options: {'api_config_file': '', 'api_config_file_pattern': '', 'api_config': 'paddle.nn.functional.normalize(Tensor([2, 2147483649],"float32"), p=2, axis=-1, )', 'paddle_only': False, 'paddle_cinn': False, 'accuracy': True, 'paddle_gpu_performance': False, 'torch_gpu_performance': False, 'paddle_torch_gpu_performance': False, 'test_amp': False, 'num_gpus': -1, 'num_workers_per_gpu': 1, 'gpu_ids': '3', 'required_memory': 10.0, 'test_cpu': False, 'use_cached_numpy': False, 'log_dir': '', 'atol': 0.01, 'rtol': 0.01, 'test_tol': False}
+2025-07-21 14:37:56.547022 test begin: paddle.nn.functional.normalize(Tensor([2, 2147483649],"float32"), p=2, axis=-1, )
+CUDA out of memory. Tried to allocate 16.00 GiB. GPU 0 has a total capacity of 79.18 GiB of which 11.92 GiB is free. Process 156524 has 1.62 GiB memory in use. Process 69989 has 65.63 GiB memory in use. Of the allocated memory 64.00 GiB is allocated by PyTorch, and 10.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[test error] paddle.nn.functional.normalize(Tensor([2, 2147483649],"float32"), p=2, axis=-1, ): CUDA out of memory. Tried to allocate 16.00 GiB. GPU 0 has a total capacity of 79.18 GiB of which 11.92 GiB is free. Process 156524 has 1.62 GiB memory in use. Process 69989 has 65.63 GiB memory in use. Of the allocated memory 64.00 GiB is allocated by PyTorch, and 10.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+W0721 14:40:22.844482 135883 gpu_resources.cc:114] Please NOTE: device: 0, GPU Compute Capability: 8.0, Driver API Version: 12.0, Runtime API Version: 11.8
+Done.
+Main process id: 136918
+Options: {'api_config_file': '', 'api_config_file_pattern': '', 'api_config': 'paddle.nn.functional.normalize(Tensor([2, 2147483649],"float32"), p=2, axis=-1, )', 'paddle_only': False, 'paddle_cinn': False, 'accuracy': True, 'paddle_gpu_performance': False, 'torch_gpu_performance': False, 'paddle_torch_gpu_performance': False, 'test_amp': False, 'num_gpus': -1, 'num_workers_per_gpu': 1, 'gpu_ids': '3', 'required_memory': 10.0, 'test_cpu': False, 'use_cached_numpy': False, 'log_dir': '', 'atol': 0.01, 'rtol': 0.01, 'test_tol': False}
+2025-07-21 14:41:43.988099 test begin: paddle.nn.functional.normalize(Tensor([2, 2147483649],"float32"), p=2, axis=-1, )
+CUDA out of memory. Tried to allocate 16.00 GiB. GPU 0 has a total capacity of 79.18 GiB of which 13.55 GiB is free. Process 148847 has 65.63 GiB memory in use. Of the allocated memory 64.00 GiB is allocated by PyTorch, and 10.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[test error] paddle.nn.functional.normalize(Tensor([2, 2147483649],"float32"), p=2, axis=-1, ): CUDA out of memory. Tried to allocate 16.00 GiB. GPU 0 has a total capacity of 79.18 GiB of which 13.55 GiB is free. Process 148847 has 65.63 GiB memory in use. Of the allocated memory 64.00 GiB is allocated by PyTorch, and 10.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+W0721 14:44:27.575742 136918 gpu_resources.cc:114] Please NOTE: device: 0, GPU Compute Capability: 8.0, Driver API Version: 12.0, Runtime API Version: 11.8
+Done.
+
+Testing shape=[2281701379, 1], dtype=float32, p=2.0, axis=1
+  Output shape: [2281701379, 1]
+  Grad shape: [2281701379, 1]
+
+Testing shape=[1073741825, 4], dtype=float16, p=2.0, axis=-1
+  Output shape: [1073741825, 4]
+  Grad shape: [1073741825, 4]
+
+Testing shape=[2, 2147483649], dtype=float16, p=2.0, axis=-1
+  Output shape: [2, 2147483649]
+  Grad shape: [2, 2147483649]
+
+Testing shape=[20452226, 5, 6, 7], dtype=float16, p=4, axis=-1
+  Output shape: [20452226, 5, 6, 7]
+  Grad shape: [20452226, 5, 6, 7]
+
+Testing shape=[20452226, 5, 6, 7], dtype=float16, p=4, axis=3
+  Output shape: [20452226, 5, 6, 7]
+  Grad shape: [20452226, 5, 6, 7]
+
+Testing shape=[2147483649, 2], dtype=float16, p=1.2, axis=-1
+  Output shape: [2147483649, 2]
+  Grad shape: [2147483649, 2]
+
+Testing shape=[4, 25565282, 6, 7], dtype=float16, p=4, axis=-1
+  Output shape: [4, 25565282, 6, 7]
+  Grad shape: [4, 25565282, 6, 7]
+
+Testing shape=[4, 25565282, 6, 7], dtype=float16, p=4, axis=3
+  Output shape: [4, 25565282, 6, 7]
+  Grad shape: [4, 25565282, 6, 7]
+
+Testing shape=[4, 5, 214748365], dtype=float16, p=2.0, axis=-1
+  Output shape: [4, 5, 214748365]
+  Grad shape: [4, 5, 214748365]
+
+Testing shape=[4, 5, 30678338, 7], dtype=float16, p=2.0, axis=-1
+  Output shape: [4, 5, 30678338, 7]
+  Grad shape: [4, 5, 30678338, 7]
+
+Testing shape=[4, 5, 30678338, 7], dtype=float16, p=4, axis=-1
+  Output shape: [4, 5, 30678338, 7]
+  Grad shape: [4, 5, 30678338, 7]
+
+Testing shape=[4, 5, 30678338, 7], dtype=float16, p=4, axis=3
+  Output shape: [4, 5, 30678338, 7]
+  Grad shape: [4, 5, 30678338, 7]
+
+Testing shape=[4, 5, 6, 35791395], dtype=float16, p=2.0, axis=-1
+  Output shape: [4, 5, 6, 35791395]
+  Grad shape: [4, 5, 6, 35791395]
+
+Testing shape=[4, 5, 6, 35791395], dtype=float16, p=4, axis=-1
+  Output shape: [4, 5, 6, 35791395]
+  Grad shape: [4, 5, 6, 35791395]
+
+Testing shape=[4, 5, 6, 35791395], dtype=float16, p=4, axis=3
+  Output shape: [4, 5, 6, 35791395]
+  Grad shape: [4, 5, 6, 35791395]
+
+Testing shape=[4294967297], dtype=float16, p=2.0, axis=0
+  Output shape: [4294967297]
+  Grad shape: [4294967297]
+
+Testing shape=[2, 2147483649], dtype=float16, p=2, axis=-1
+  Output shape: [2, 2147483649]
+  Grad shape: [2, 2147483649]

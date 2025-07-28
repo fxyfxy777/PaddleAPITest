@@ -1,0 +1,60 @@
+Main process id: 132831
+Options: {'api_config_file': '', 'api_config_file_pattern': '', 'api_config': 'paddle.dist(x=Tensor([4294967297],"float16"), y=Tensor([4294967297],"float16"), )', 'paddle_only': False, 'paddle_cinn': False, 'accuracy': True, 'paddle_gpu_performance': False, 'torch_gpu_performance': False, 'paddle_torch_gpu_performance': False, 'test_amp': False, 'num_gpus': 5, 'num_workers_per_gpu': 1, 'gpu_ids': '', 'required_memory': 10.0, 'test_cpu': False, 'use_cached_numpy': False, 'log_dir': '', 'atol': 0.01, 'rtol': 0.01, 'test_tol': False}
+2025-07-21 14:24:59.005795 test begin: paddle.dist(x=Tensor([4294967297],"float16"), y=Tensor([4294967297],"float16"), )
+W0721 14:28:11.519858 132831 gpu_resources.cc:114] Please NOTE: device: 0, GPU Compute Capability: 8.0, Driver API Version: 12.0, Runtime API Version: 11.8
+thread_per_block: 512, block_per_grid: 8388609
+numel:8388609
+int32max:2147483647
+int32numel:8388609
+terminate called after throwing an instance of 'common::enforce::EnforceNotMet'
+  what():  (External) CUDA error(700), an illegal memory access was encountered. 
+  [Hint: 'cudaErrorIllegalAddress'. The device encountered a load or store instruction on an invalid memory address. This leaves the process in an inconsistentstate and any further CUDA work will return the same error. To continue using CUDA, the process must be terminated and relaunched. ] (at /home/fanxiangyu/Paddle/paddle/phi/core/platform/device/gpu/gpu_info.cc:348)
+
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   egr::Grad(std::vector<paddle::Tensor, std::allocator<paddle::Tensor> > const&, std::vector<paddle::Tensor, std::allocator<paddle::Tensor> > const&, std::vector<paddle::Tensor, std::allocator<paddle::Tensor> > const&, bool, bool, bool, bool, std::vector<paddle::Tensor, std::allocator<paddle::Tensor> > const&)
+1   egr::RunBackward(std::vector<paddle::Tensor, std::allocator<paddle::Tensor> > const&, std::vector<paddle::Tensor, std::allocator<paddle::Tensor> > const&, bool, bool, std::vector<paddle::Tensor, std::allocator<paddle::Tensor> > const&, bool, std::vector<paddle::Tensor, std::allocator<paddle::Tensor> > const&)
+2   DistGradNode::operator()(paddle::small_vector<std::vector<paddle::Tensor, std::allocator<paddle::Tensor> >, 15u>&, bool, bool)
+3   paddle::experimental::dist_grad(paddle::Tensor const&, paddle::Tensor const&, paddle::Tensor const&, paddle::Tensor const&, float, paddle::Tensor*, paddle::Tensor*)
+4   void phi::DistGradKernel<phi::dtype::float16, phi::GPUContext>(phi::GPUContext const&, phi::DenseTensor const&, phi::DenseTensor const&, phi::DenseTensor const&, phi::DenseTensor const&, float, phi::DenseTensor*, phi::DenseTensor*)
+5   phi::DenseTensor::~DenseTensor()
+6   std::_Sp_counted_deleter<phi::Allocation*, std::function<void (phi::Allocation*)>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+7   paddle::memory::allocation::CUDAAllocator::FreeImpl(phi::Allocation*)
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Process abort signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1753079359 (unix time) try "date -d @1753079359" if you are using GNU date ***]
+  [SignalInfo: *** SIGABRT (@0x206df) received by PID 132831 (TID 0x7f846d935740) from PID 132831 ***]
+
+Main process id: 140179
+Options: {'api_config_file': '', 'api_config_file_pattern': '', 'api_config': 'paddle.dist(x=Tensor([4, 1073741825],"float16"), y=Tensor([4, 1073741825],"float16"), )', 'paddle_only': False, 'paddle_cinn': False, 'accuracy': True, 'paddle_gpu_performance': False, 'torch_gpu_performance': False, 'paddle_torch_gpu_performance': False, 'test_amp': False, 'num_gpus': 5, 'num_workers_per_gpu': 1, 'gpu_ids': '', 'required_memory': 10.0, 'test_cpu': False, 'use_cached_numpy': False, 'log_dir': '', 'atol': 0.01, 'rtol': 0.01, 'test_tol': False}
+2025-07-21 14:54:38.607714 test begin: paddle.dist(x=Tensor([4, 1073741825],"float16"), y=Tensor([4, 1073741825],"float16"), )
+W0721 14:57:43.707136 140179 gpu_resources.cc:114] Please NOTE: device: 0, GPU Compute Capability: 8.0, Driver API Version: 12.0, Runtime API Version: 11.8
+thread_per_block: 512, block_per_grid: 8388609
+numel:8388609
+int32max:2147483647
+int32numel:8388609
+[Pass] paddle.dist(x=Tensor([4, 1073741825],"float16"), y=Tensor([4, 1073741825],"float16"), )
+Done.
+
+Main process id: 8925
+Options: {'api_config_file': '', 'api_config_file_pattern': '', 'api_config': 'paddle.dist(x=Tensor([4294967808],"float16"), y=Tensor([4294967808],"float32"), )', 'paddle_only': False, 'paddle_cinn': False, 'accuracy': True, 'paddle_gpu_performance': False, 'torch_gpu_performance': False, 'paddle_torch_gpu_performance': False, 'test_amp': False, 'num_gpus': 5, 'num_workers_per_gpu': 1, 'gpu_ids': '', 'required_memory': 10.0, 'test_cpu': False, 'use_cached_numpy': False, 'log_dir': '', 'atol': 0.01, 'rtol': 0.01, 'test_tol': False}
+2025-07-21 16:02:55.929500 test begin: paddle.dist(x=Tensor([4294967808],"float16"), y=Tensor([4294967808],"float32"), )
+W0721 16:03:47.385183  8925 gpu_resources.cc:114] Please NOTE: device: 0, GPU Compute Capability: 8.0, Driver API Version: 12.0, Runtime API Version: 11.8
+Traceback (most recent call last):
+  File "/home/fanxiangyu/PaddleAPITest/engineV2.py", line 667, in <module>
+    main()
+  File "/home/fanxiangyu/PaddleAPITest/engineV2.py", line 485, in main
+    case.test()
+  File "/home/fanxiangyu/PaddleAPITest/tester/accuracy.py", line 51, in test
+    if not self.gen_numpy_input():
+  File "/home/fanxiangyu/PaddleAPITest/tester/base.py", line 869, in gen_numpy_input
+    kwarg_config.get_numpy_tensor(self.api_config, key=key)
+  File "/home/fanxiangyu/PaddleAPITest/tester/api_config/config_analyzer.py", line 1860, in get_numpy_tensor
+    self.numpy_tensor = (numpy.random.random(self.shape) - 0.5).astype(self.dtype)
+KeyboardInterrupt

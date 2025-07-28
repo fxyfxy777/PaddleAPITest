@@ -389,7 +389,7 @@ def main():
     parser.add_argument(
         "--gpu_ids",
         type=str,
-        default="",
+        default="1,2",
         help="Comma-separated list of GPU IDs to use (e.g., 0,1,2), -1 for all available",
     )
     parser.add_argument(

@@ -1,0 +1,7 @@
+paddle.dist(x=Tensor([1073741825, 4],"float16"), y=Tensor([1073741825, 4],"float16"), )
+paddle.dist(x=Tensor([1073741825],"float16"), y=Tensor([4, 1073741825],"float16"), )
+paddle.dist(x=Tensor([1073741825],"float16"), y=Tensor([4, 1073741825],"float16"), p=4, )
+paddle.dist(x=Tensor([10],"float16"), y=Tensor([429496730, 10],"float16"), )
+paddle.dist(x=Tensor([10],"float16"), y=Tensor([429496730, 10],"float16"), p=4, )
+paddle.dist(x=Tensor([4, 1073741825],"float16"), y=Tensor([4, 1073741825],"float16"), )
+paddle.dist(x=Tensor([4294967297],"float16"), y=Tensor([4294967297],"float16"), )

@@ -1857,7 +1857,15 @@ class TensorConfig:
                     if "int" in self.dtype:
                         self.numpy_tensor = (numpy.random.randint(-65535, 65535, size=self.shape)).astype(self.dtype)
                     else:
-                        self.numpy_tensor = (numpy.random.random(self.shape) - 0.5).astype(self.dtype)
+                        numpy.random.seed(42) 
+                        # self.numpy_tensor = (numpy.random.random(self.shape) - 0.5).astype(self.dtype)
+                        # numpy.savez("npzFile/pnorm_x.npz", x=self.numpy_tensor)
+                        self.numpy_tensor = (numpy.random.random(self.shape) + 0.5).astype(self.dtype)
+                        if os.getenv("SAVE_PNORM_DATA", "0") == "1":
+                            from datetime import datetime
+                            current_time = datetime.now().strftime("%Y%m%d_%H-%M-%S")
+                            filename = f"npzFile/pnorm_x_{current_time}.npz"
+                            numpy.savez(filename, x=self.numpy_tensor)
         
         self.dtype = original_dtype
         return self.numpy_tensor
