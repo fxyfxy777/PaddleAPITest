@@ -268,6 +268,11 @@ class APITestAccuracy(APITestBase):
                 # if torch_tensor.dtype == torch.bfloat16:
                 #     torch_tensor = torch_tensor.to(dtype=torch.float32)
                 # self.np_assert_accuracy(paddle_tensor.numpy(), torch_tensor.numpy(), atol=self.atol, rtol=self.rtol)
+                # paddle_np = paddle_tensor.numpy()
+                # torch_np = torch_tensor.detach().cpu().numpy()
+
+                # # 保存为 npz 文件
+                # numpy.savez("ZAA-fxyFile/npzFile/comparison_tensors.npz", paddle_tensor=paddle_np, torch_tensor=torch_np)
                 self.torch_assert_accuracy(paddle_tensor, torch_tensor, atol=self.atol, rtol=self.rtol)
             except Exception as err:
                 if self.is_backward:
